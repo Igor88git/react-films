@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
+
+
+nav {
+  padding: 0 1rem;  /* сверху/снизу 0, справа/слева 1rem */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+}
+
+.content {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 1.5rem 0; /* сверху/снизу 1.5rem, справа/слева 0 */
+}
+
+.movies {
+  display: grid; /* дисплей сетка, и для этой сетки колонки будут повторяться по следующему правилу: ниже размеры (minmax это от и до) */
+  grid-template-columns: repeat(auto-fill, minmax(170px, 220px));
+  gap: 2rem;  /* расстояние между эл */
+}
+
+.search-btn {
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+}
+
+label:not(:last-child) { /* которые не являются последним ребенком */
+margin-right: 4rem;
+}
