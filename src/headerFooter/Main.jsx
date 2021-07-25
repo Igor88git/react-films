@@ -11,7 +11,7 @@ class Main extends React.Component {
 
     // метод жизненного цикла компонент смонтировался, внутри которого мы будем делать запрос наших данных
     componentDidMount() {
-        fetch(`http://www.omdbapi.com/?apikey=e490bdaa&s=spider`)
+        fetch(`https://www.omdbapi.com/?apikey=e490bdaa&s=spider`)
     
     // ответ придет response который нужно преобразовать через метод json()
         .then(response => response.json())
@@ -23,7 +23,7 @@ class Main extends React.Component {
     // если будет не 'all' а movie или series у нас появится дополнительный гет-параметр `&type=${type}`
     searchFilm = (str, type='all') => {
         this.setState({ loading: true })
-        fetch(`http://www.omdbapi.com/?apikey=e490bdaa&s=${str}${type !== 'all' ? `&type=${type}` : ''}`)
+        fetch(`https://www.omdbapi.com/?apikey=e490bdaa&s=${str}${type !== 'all' ? `&type=${type}` : ''}`)
         .then(response => response.json())
         .then(data => this.setState({movies: data.Search, loading: false})) // каждый раз когда данные загружены - loading: false
     }
