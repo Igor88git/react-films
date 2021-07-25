@@ -4,7 +4,7 @@ import {Main} from './headerFooter/Main'
 
 function App() {
   return (
-    <>  {/* <></> позволяет добавить несколько элементов */}
+    <>  
       <Header />
       <Main />
       <Footer />
