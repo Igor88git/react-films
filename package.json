@@ -2,7 +2,7 @@
   "name": "expert",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Igor88git.github.io/react-films",
+  "homepage": "https://igorcodes.github.io/react-films/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
