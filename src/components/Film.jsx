@@ -1,5 +1,5 @@
 function Film(props) {
-    // ожидает массив данных (props) поэтому деструктурируем
+    
     const {
         Title: title, 
         Year: year,
@@ -9,8 +9,7 @@ function Film(props) {
     } = props;
 
     // https://materializecss.com/cards.html
-    // динамичесски получаем картинку через poster
-    // Деструктурировали props, и ниже все использовали 
+    
     return <div id={id} className="card film">
     <div className="card-image waves-effect waves-block waves-light">
 
