@@ -9,14 +9,14 @@ class Main extends React.Component {
         loading: true,
     }
 
-    // метод жизненного цикла компонент смонтировался, внутри которого мы будем делать запрос наших данных
+    
     componentDidMount() {
         fetch(`https://www.omdbapi.com/?apikey=e490bdaa&s=spider`)
     
     // ответ придет response который нужно преобразовать через метод json()
         .then(response => response.json())
 
-    // потом придут нужные данные, при их получении обращаемся к setState говорим что в наши фильмы нужно положить то что лежит в data в его ключе Search
+    // при получении данных обращаемся к setState говорим что в наши фильмы нужно положить то что лежит в data в его ключе Search
         .then(data => this.setState({movies: data.Search, loading: false})) // каждый раз когда данные загружены - loading: false
     }
     
@@ -25,11 +25,11 @@ class Main extends React.Component {
         this.setState({ loading: true })
         fetch(`https://www.omdbapi.com/?apikey=e490bdaa&s=${str}${type !== 'all' ? `&type=${type}` : ''}`)
         .then(response => response.json())
-        .then(data => this.setState({movies: data.Search, loading: false})) // каждый раз когда данные загружены - loading: false
+        .then(data => this.setState({movies: data.Search, loading: false})) // когда данные загружены - loading: false
     }
 
     render() {
-        const {movies, loading} = this.state; // деструктуризация для прелоадера,
+        const {movies, loading} = this.state;
 
         return <main className='container content'>
             <Search searchFilm={this.searchFilm} />
