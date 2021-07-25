@@ -9,7 +9,7 @@ class Search extends React.Component {
 
     handleKey = (event) => {
         if (event.key === 'Enter') {
-            this.props.searchFilm(this.state.search, this.state.type); // при нажатии энтер вызываем этот метод и передаем ему текущий стейт
+            this.props.searchFilm(this.state.search, this.state.type); 
         }
     }
 
