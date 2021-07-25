@@ -26,13 +26,13 @@ class Search extends React.Component {
           <div className="input-field">
             <input 
                 className="validate" 
-                placeholder='Search:  (English Letters - The OMDb API is a RESTful web service to obtain movie information)' 
+                placeholder='  OMDb API is a RESTful web service to obtain movie information)' 
                 type="search" 
                 value={this.state.search}
                 onChange={(event) => this.setState({search: event.target.value})}  // обновлять стейт
                 onKeyDown={this.handleKey}
             />
-            <button className='btn search-btn' onClick={ () => this.props.searchFilm(this.state.search, this.state.type) }>Поиск</button>
+            <button className='btn search-btn' onClick={ () => this.props.searchFilm(this.state.search, this.state.type) }>Search</button>
           </div>
         <div>
           
