@@ -17,11 +17,11 @@ nav {
 
 .content {
   min-height: calc(100vh - 70px - 64px);
-  padding: 1.5rem 0; /* сверху/снизу 1.5rem, справа/слева 0 */
+  padding: 1.5rem 0;
 }
 
 .movies {
-  display: grid; /* дисплей сетка, и для этой сетки колонки будут повторяться по следующему правилу: ниже размеры (minmax это от и до) */
+  display: grid; /* дисплей сетка, и для этой сетки колонки будут повторяться по следующему правилу: minmax от и до */
   grid-template-columns: repeat(auto-fill, minmax(170px, 220px));
   gap: 2rem;  /* расстояние между эл */
 }
