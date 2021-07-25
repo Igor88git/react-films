@@ -26,7 +26,7 @@ class Search extends React.Component {
           <div className="input-field">
             <input 
                 className="validate" 
-                placeholder='Поиск - english letters only' 
+                placeholder='Search:  (English Letters - The OMDb API is a RESTful web service to obtain movie information)' 
                 type="search" 
                 value={this.state.search}
                 onChange={(event) => this.setState({search: event.target.value})}  // обновлять стейт
